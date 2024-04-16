@@ -6,21 +6,27 @@ public class ArrowController : MonoBehaviour
 {
     [SerializeField] private GameObject midPointVisual, arrowPrefab, arrowSpawnPoint;
     [SerializeField] private float arrowMaxSpeed = 10;
-    
+
     public void PrepareArrow()
     {
         Transform arrowTransform = midPointVisual.transform.Find("Arrow");
         arrowTransform.gameObject.SetActive(true);
     }
-    
+
     public void ResetArrow(float strength)
     {
+        if (strength <= 0) return;
+
         Transform arrowTransform = midPointVisual.transform.Find("Arrow");
+        if (!arrowTransform.gameObject.activeSelf)
+        {
+            return;
+        }
         arrowTransform.gameObject.SetActive(false);
-        
-        GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.transform.position, midPointVisual.transform.rotation);
+
+        GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.transform.position,
+            midPointVisual.transform.rotation);
         Rigidbody rb = arrow.GetComponent<Rigidbody>();
         rb.AddForce(midPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);
     }
-    
 }
