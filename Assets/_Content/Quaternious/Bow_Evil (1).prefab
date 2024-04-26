@@ -964,6 +964,7 @@ GameObject:
   - component: {fileID: 7344340305035343219}
   - component: {fileID: 7993415199354232350}
   - component: {fileID: 6658654952843538741}
+  - component: {fileID: 3854743548542131678}
   m_Layer: 6
   m_Name: Bow_Evil (1)
   m_TagString: Untagged
@@ -1265,7 +1266,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6658654952843538741}
         m_TargetAssemblyTypeName: ArrowController, Assembly-CSharp
-        m_MethodName: PrepareArrow
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1305,8 +1306,21 @@ MonoBehaviour:
   midPointVisual: {fileID: 7971452846924656829}
   arrowPrefab: {fileID: 6726587074533708524, guid: 6850c6ad5c870e34fb40ad5f7af67306,
     type: 3}
-  arrowSpawnPoint: {fileID: 0}
+  arrowSpawnPoint: {fileID: 832273834999755111}
   arrowMaxSpeed: 10
+--- !u!114 &3854743548542131678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8986255506551857916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfda11636eec1a44b74baca05af873c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  midPointVisual: {fileID: 7971452846924656829}
 --- !u!1001 &1247118194719876069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1323,7 +1337,7 @@ PrefabInstance:
     - target: {fileID: 2410271734309294575, guid: ae75179165c8e854fa9af578948a1009,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2638678694783495515, guid: ae75179165c8e854fa9af578948a1009,
         type: 3}

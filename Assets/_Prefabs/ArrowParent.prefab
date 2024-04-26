@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 8362636956233555048}
   - component: {fileID: 7087463046886933511}
   - component: {fileID: 4224336547886508525}
+  - component: {fileID: 3947397488324417025}
   m_Layer: 3
   m_Name: ArrowParent
   m_TagString: Arrow
@@ -219,6 +220,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7087463046886933511}
+--- !u!114 &3947397488324417025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726587074533708524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08426756f7fdc8f479698a5a693e59ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 7087463046886933511}
+  myCollider: {fileID: 2638678694783495515, guid: ae75179165c8e854fa9af578948a1009,
+    type: 3}
+  stickingArrow: {fileID: 8922283730425721487, guid: d9bd4902874d6824e8b6ac16a3c464ac,
+    type: 3}
 --- !u!1001 &4545825367615972982
 PrefabInstance:
   m_ObjectHideFlags: 0
