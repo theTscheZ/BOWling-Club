@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrow
+  - Pin
+  - Hittable
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - Bow
   - Player
-  - 
+  - Quiver
   - 
   - 
   - 
