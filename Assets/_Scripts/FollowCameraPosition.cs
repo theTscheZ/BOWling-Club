@@ -17,6 +17,6 @@ public class FollowCameraPosition : MonoBehaviour
         transform.localPosition = newPosition;
 
         // Ignoriere jegliche Rotation und setze die Rotation des Child auf die Identitätsrotation
-        transform.rotation = Quaternion.identity;
+        // transform.rotation = Quaternion.identity;
     }
 }
