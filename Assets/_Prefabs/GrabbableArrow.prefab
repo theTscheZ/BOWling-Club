@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 9029617629957231137}
   - component: {fileID: 1169337690280980825}
   - component: {fileID: 5522550747641075248}
+  - component: {fileID: 1610978125177455273}
   m_Layer: 6
   m_Name: GrabbableArrow
   m_TagString: Arrow
@@ -336,7 +337,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &6723205687910026504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,6 +533,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69429de0825a8fa44a7cc266a8b84bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1610978125177455273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922283730425721487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa6e160f0fd06648a4be032d64c6eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5983227572026148573

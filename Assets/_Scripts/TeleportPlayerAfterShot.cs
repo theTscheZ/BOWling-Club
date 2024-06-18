@@ -5,14 +5,14 @@ using UnityEngine;
 public class TeleportPlayerAfterShot : MonoBehaviour
 {
     private bool _checkVelocity;
-    public Transform rigTransform;
+    private Transform _rigTransform;
     
     // Start is called before the first frame update
     void Start()
     {
         _checkVelocity = false;
         //hol das transform des rigs
-        rigTransform = GameObject.Find("XR Rig").transform;
+        _rigTransform = GameObject.Find("XR Origin (XR Rig)").transform;
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class TeleportPlayerAfterShot : MonoBehaviour
             if (velocity < 0.5f)
             {
                 // Teleportiere den Spieler an die Position des GameObjects
-                rigTransform.position = transform.position;
+                _rigTransform.position = new Vector3(0,2,0) + transform.position;
                 // Lösche das GameObject
                 Destroy(gameObject);
             }
@@ -36,9 +36,13 @@ public class TeleportPlayerAfterShot : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // Überprüfe, ob die Kollision mit einem anderen GameObject stattgefunden hat
-        if (collision.gameObject.CompareTag("Hittable")) // Hier kannst du einen bestimmten Tag verwenden, um die Art des kollidierenden Objekts zu überprüfen
+        if (collision.gameObject.CompareTag("Hittable")) 
         {
             _checkVelocity = true;
+        }
+        if (collision.gameObject.CompareTag("Death"))
+        {
+            Destroy(gameObject);
         }
     }
 }
