@@ -26,7 +26,7 @@ public class TeleportPlayerAfterShot : MonoBehaviour
             if (velocity < 0.5f)
             {
                 // Teleportiere den Spieler an die Position des GameObjects
-                _rigTransform.position = new Vector3(0,2,0) + transform.position;
+                _rigTransform.position = new Vector3(0,1.5f,0) + transform.position;
                 // Lösche das GameObject
                 Destroy(gameObject);
             }
